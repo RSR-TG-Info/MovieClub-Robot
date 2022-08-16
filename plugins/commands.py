@@ -3,7 +3,7 @@ import logging
 import random
 import asyncio
 from random import choice
-from translation import MovieClub
+from translation import Script
 from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
