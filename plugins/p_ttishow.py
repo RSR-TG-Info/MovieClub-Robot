@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from translation import MovieClub
+from translation import Script
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
 from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
@@ -152,7 +152,7 @@ async def get_ststs(bot, message):
     free = 536870912 - size
     size = get_size(size)
     free = get_size(free)
-    await rju.edit(MovieClub.STATUS_TXT.format(files, total_users, totl_chats, size, free))
+    await rju.edit(Script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
 
 
 # a function for trespassing into others groups, Inspired by a Vazha
