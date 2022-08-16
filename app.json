@@ -1,5 +1,5 @@
 {
-    "name": "LuciferMoringstar-Robot",
+    "name": "MoviesClub_Robot",
     "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
     "stack": "container",
     "keywords": [
@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/PROFESSOR-9/LuciferMoringstar-Robot",
-    "repository": "https://github.com/PROFESSOR-9/LuciferMoringstar-Robot",
+    "website": "https://github.com/DragonTG/MovieClub-Robot",
+    "repository": "https://github.com/DragonTG/MovieClub-Robot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
