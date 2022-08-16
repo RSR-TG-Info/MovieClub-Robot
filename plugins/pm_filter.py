@@ -2,7 +2,7 @@
 import asyncio
 import re
 import ast
-from translation import MovieClub
+from translation import Script
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
@@ -482,7 +482,7 @@ Phonepe 📲 Soon...
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=LuciferMoringstar.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text=Script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -529,7 +529,7 @@ Phonepe 📲 Soon...
             text="▣ ▣ ▣"
         )       
         await query.message.edit_text(
-            text=MovieClub.HELP_TXT.format(query.from_user.mention),
+            text=Script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
         )  
@@ -549,7 +549,7 @@ Phonepe 📲 Soon...
             text="▣ ▣ ▣"
         )       
         await query.message.edit_text(
-            text=MovieClub.INFO_TXT,
+            text=Script.INFO_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -570,7 +570,7 @@ Phonepe 📲 Soon...
             text="▣ ▣ ▣"
         )       
         await query.message.edit_text(
-            text=MovieClub.SEARCH_TXT,
+            text=Script.SEARCH_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -591,7 +591,7 @@ Phonepe 📲 Soon...
             text="▣ ▣ ▣"
         )       
         await query.message.edit_text(
-            text=MovieClub.LINK_TXT,
+            text=Script.LINK_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -612,7 +612,7 @@ Phonepe 📲 Soon...
             text="▣ ▣ ▣"
         )       
         await query.message.edit_text(
-            text=MovieClub.ALIVE_TXT,
+            text=Script.ALIVE_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -633,7 +633,7 @@ Phonepe 📲 Soon...
             text="▣ ▣ ▣"
         )       
         await query.message.edit_text(
-            text=MovieClub.MUSIC_TXT,
+            text=Script.MUSIC_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
