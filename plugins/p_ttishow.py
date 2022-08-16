@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from translation import LuciferMoringstar
+from translation import MovieClub
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
 from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
@@ -152,7 +152,7 @@ async def get_ststs(bot, message):
     free = 536870912 - size
     size = get_size(size)
     free = get_size(free)
-    await rju.edit(LuciferMoringstar.STATUS_TXT.format(files, total_users, totl_chats, size, free))
+    await rju.edit(MovieClub.STATUS_TXT.format(files, total_users, totl_chats, size, free))
 
 
 # a function for trespassing into others groups, Inspired by a Vazha
@@ -176,7 +176,7 @@ async def gen_invite(bot, message):
 
 @Client.on_message(filters.command('ban_user') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    # https://t.me/Josprojects/
+    # https://t.me/techprojects/
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
@@ -243,7 +243,7 @@ async def unban_a_user(bot, message):
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://t.me/Josprojects/
+    # https://t.me/techprojects/
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
