@@ -507,7 +507,7 @@ Phonepe 📲 Soon...
             
             InlineKeyboardButton('🚨 Alive', callback_data='alive'),
             InlineKeyboardButton('🔍 IMDB', callback_data='search'),
-            InlineKeyboardButton('🔗 Link, callback_data='link'),
+            InlineKeyboardButton('🔗 Link', callback_data='link'),
             ],[
             InlineKeyboardButton('⚠️ Faq', callback_data='faq'),
             InlineKeyboardButton('🆔 Ids', callback_data='info'),
