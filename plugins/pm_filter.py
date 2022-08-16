@@ -29,6 +29,26 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 
+@Client.on_message(filters.command("link"))
+async def link(client, message):
+    await message.reply_text("♨️♨️ Are You Movie Lover ? ♨️
+
+🎬 Then You Are Welcomed To My Group For A Daily Breeze Of Movies
+༺━━━━━━━ ✧ ━━━━━━━༻
+ 
+📌 Old & New Movies/Series
+ 
+📌 Proper HD, DVD-Rip & Tv-Rip
+
+📌 Available In Various Size
+
+📌 Bengali | Hindi | English & More
+
+༺━━━━━━━ ✧ ━━━━━━━༻
+
+✔️ Group - https://telegram.me/joinchat/ZLfYBUbS-adiY2E1
+
+👆Click Link For Join Group")
 
 @Client.on_message(filters.group & filters.text & ~filters.edited & filters.chat(-1001767386340) & filters.incoming)
 async def give_filter(client, message):
