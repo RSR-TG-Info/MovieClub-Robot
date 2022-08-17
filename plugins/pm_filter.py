@@ -1,4 +1,7 @@
 # Kanged From @hellodragan 
+import pytz
+import datetime
+from pyrogram import Client, filters
 import asyncio
 import re
 import ast
@@ -28,6 +31,21 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
+
+@Client.on_message(filters.command("start"))
+async def pstart(client, message):
+    now=datetime.datetime.now()
+    tz=pytz.timezone('Asia/Kolkata')
+    yn=now.astimezone(tz)
+    hour=yn.hour
+    if 0<=hour<12:
+        greeting="goodmorning"
+    elif 12<=hour <17:
+        greeting='good afternoon'
+    else:
+        greeting='good evening'
+    await message.reply_text(f"Hello {message.from_user.mention}, {greeting})
+
 
 @Client.on_message(filters.command("link"))
 async def link(client, message):
