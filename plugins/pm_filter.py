@@ -44,7 +44,7 @@ async def pstart(client, message):
         greeting='good afternoon'
     else:
         greeting='good evening'
-    await message.reply_text(f"Hello {message.from_user.mention}, {greeting})
+    await message.reply_text(f"Hello {message.from_user.mention}, {greeting}")
 
 
 @Client.on_message(filters.command("link"))
