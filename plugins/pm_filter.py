@@ -492,13 +492,15 @@ Phonepe 📲 Soon...
         now=datetime.datetime.now()
         tz=pytz.timezone('Asia/Kolkata')
         yn=now.astimezone(tz)
-        hour=yn.hour
-        if 0<=hour<12:
-            greeting="goodmorning"
-        elif 12<=hour <17:
-            greeting='good afternoon'
-        else:
-            greeting='good evening'
+        time=m.hour
+        if time < 12:
+     greeting="Good Morning"
+ elif time < 15:
+     greeting="Good Afternoon"
+ elif time < 20:
+     greeting="Good Evening"
+ else:
+     greeting="Good Night"
         await query.message.edit_text(
             text=Script.START_TXT.format(query.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
