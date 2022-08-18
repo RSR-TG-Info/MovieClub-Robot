@@ -62,13 +62,15 @@ async def start(client, message):
         now=datetime.datetime.now()
         tz=pytz.timezone('Asia/Kolkata')
         yn=now.astimezone(tz)
-        hour=yn.hour
-        if 0<=hour<12:
-            greeting="goodmorning"
-        elif 12<=hour <17:
-            greeting='good afternoon'
-        else:
-            greeting='good evening'
+        time=m.hour
+        if time < 12:
+     greeting="Good Morning"
+ elif time < 15:
+     greeting="Good Afternoon"
+ elif time < 20:
+     greeting="Good Evening"
+ else:
+     greeting="Good Night"
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(message.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
