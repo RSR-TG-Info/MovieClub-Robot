@@ -64,13 +64,13 @@ async def start(client, message):
         yn=now.astimezone(tz)
         time=m.hour
         if time < 12:
-     greeting="Good Morning"
- elif time < 15:
-     greeting="Good Afternoon"
- elif time < 20:
-     greeting="Good Evening"
- else:
-     greeting="Good Night"
+          greeting="Good Morning"
+        elif time < 15:
+          greeting="Good Afternoon"
+        elif time < 20:
+          greeting="Good Evening"
+        else:
+          greeting="Good Night"
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(message.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
