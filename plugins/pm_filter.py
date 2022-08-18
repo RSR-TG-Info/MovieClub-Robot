@@ -489,8 +489,19 @@ Phonepe 📲 Soon...
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.reply_text(
-            text=Script.START_TXT.format(query.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
+        now=datetime.datetime.now()
+        tz=pytz.timezone('Asia/Kolkata')
+        yn=now.astimezone(tz)
+        hour=yn.hour
+        if 0<=hour<12:
+            greeting="goodmorning"
+        elif 12<=hour <17:
+            greeting='good afternoon'
+        else:
+            greeting='good evening'
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=Script.START_TXT.format(query.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
