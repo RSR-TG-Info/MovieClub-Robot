@@ -499,7 +499,7 @@ Phonepe 📲 Soon...
             greeting='good afternoon'
         else:
             greeting='good evening'
-        await message.reply_photo(
+        await query.reply_photo(
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(query.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
