@@ -494,13 +494,13 @@ Phonepe 📲 Soon...
         yn=now.astimezone(tz)
         time=m.hour
         if time < 12:
-     greeting="Good Morning"
- elif time < 15:
-     greeting="Good Afternoon"
- elif time < 20:
-     greeting="Good Evening"
- else:
-     greeting="Good Night"
+          greeting="Good Morning"
+        elif time < 15:
+          greeting="Good Afternoon"
+        elif time < 20:
+          greeting="Good Evening"
+        else:
+          greeting="Good Night"
         await query.message.edit_text(
             text=Script.START_TXT.format(query.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
