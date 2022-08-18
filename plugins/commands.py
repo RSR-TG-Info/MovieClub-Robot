@@ -2,6 +2,8 @@ import os
 import logging
 import random
 import asyncio
+import datetime
+import pytz
 from random import choice
 from translation import Script
 from pyrogram import Client, filters
@@ -56,10 +58,20 @@ async def start(client, message):
         await m.delete()
         m=await message.reply_sticker("CAACAgUAAxkBAAEFjVti978muRc1EAVXbrkizq_lE-2PkwACqAADyJRkFJWi9VCRb0zWKQQ")
         await asyncio.sleep(1)
-        await m.delete()        
+        await m.delete()  
+        now=datetime.datetime.now()
+        tz=pytz.timezone('Asia/Kolkata')
+        yn=now.astimezone(tz)
+        hour=yn.hour
+        if 0<=hour<12:
+            greeting="goodmorning"
+        elif 12<=hour <17:
+            greeting='good afternoon'
+        else:
+            greeting='good evening'
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=Script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            caption=Script.START_TXT.format(message.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             quote=True,
             parse_mode='html'
