@@ -62,12 +62,12 @@ async def start(client, message):
         now=datetime.datetime.now()
         tz=pytz.timezone('Asia/Kolkata')
         yn=now.astimezone(tz)
-        time=m.hour
-        if time < 12:
+        hour=yn.hour
+        if hour < 12:
           greeting="Good Morning"
-        elif time < 15:
+        elif hour < 15:
           greeting="Good Afternoon"
-        elif time < 20:
+        elif hour < 20:
           greeting="Good Evening"
         else:
           greeting="Good Night"
