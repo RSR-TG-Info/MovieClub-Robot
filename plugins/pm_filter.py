@@ -32,19 +32,6 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 
-@Client.on_message(filters.command("start"))
-async def pstart(client, message):
-    now=datetime.datetime.now()
-    tz=pytz.timezone('Asia/Kolkata')
-    yn=now.astimezone(tz)
-    hour=yn.hour
-    if 0<=hour<12:
-        greeting="goodmorning"
-    elif 12<=hour <17:
-        greeting='good afternoon'
-    else:
-        greeting='good evening'
-    await message.reply_text(f"""<i><b>Hello 👋 {message.from_user.mention}, {greeting}</i></b>\n\n<i><b>I Am Not Only <a href="https://t.me/Movieclub_Robot">Movie Club Bot</a> To Assist You But Also Employed At <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> Group By <a href="https://t.me/hellodragan">Dragon</a> So You Can't Get My Service By Adding Me To Your Group So Don't Waste Your Time & Data</i></b> 😉\n\n<i><b>Better You Click Below & Join <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> & Feel The Experience Of Downloading Unlimited Movies/Series</i></b> ✅\n\n<i><b>For More Information Click ℹ️ Help</i></b>""")
 
 
 @Client.on_message(filters.command("link"))
