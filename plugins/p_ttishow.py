@@ -57,7 +57,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>👋 Hello {u.mention},\n\n</b> Welcome To <b>{message.chat.title}</b> My Name Is <b><a href="https://t.me/Moviesclub_Robot">MOVIE CLUB BOT</a></b>,\nI Can Provide Movies/Series In This Group.\nJust Type The Actual Name Of The Movie/Series.\nYou Will Get The Movie/Series If You Write Correct Spelling.\nIf You Don't Get The Movie/Series It Is Sure That You Have Written Incorrect Spelling Or Your Requested Movie/Series Does Not Exit In My Database 😐..",
+                text=f"<b>👋 Hello {u.mention},</b>\n\nWelcome To <b>{message.chat.title}</b> My Name Is <b><a href="https://t.me/Moviesclub_Robot">MOVIE CLUB BOT</a></b>,\nI Can Provide Movies/Series In This Group.\nJust Type The Actual Name Of The Movie/Series.\nYou Will Get The Movie/Series If You Write Correct Spelling.\nIf You Don't Get The Movie/Series It Is Sure That You Have Written Incorrect Spelling Or Your Requested Movie/Series Does Not Exit In My Database 😐..",
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
     
