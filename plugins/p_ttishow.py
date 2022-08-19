@@ -56,11 +56,11 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_text[(
+                temp.MELCOW['welcome'] = await message.reply_text(
                 text=f'<b>👋 Hello {u.mention},</b> Welcome To <b>{message.chat.title}</b> My Name Is <b><a href="https://t.me/Moviesclub_Robot">MOVIE CLUB BOT</a></b>, I Can Provide Movies/Series In This Group.Just Type The Actual Name Of The Movie/Series.You Will Get The Movie/Series If You Write Correct Spelling.If You Don't Get The Movie/Series It Is Sure That You Have Written Incorrect Spelling Or Your Requested Movie/Series Does Not Exit In My Database 😐..',
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons)
-                )]
+               )
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
     if len(message.command) == 1:
