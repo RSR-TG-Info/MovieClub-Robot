@@ -57,7 +57,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Join Updates Channel 👇</b>",
+                text=f"<i><b>👋 Hello {u.mention}, Welcome To {message.chat.title} My Name Is <a href="https://t.me/Moviesclub_Robot">MOVIE CLUB BOT</a>, I Can Provide Movies/Series In This Group.Just Type The Actual Name Of The Movie/Series.You Will Get The Movie/Series If You Write Correct Spelling.If You Don't Get The Movie/Series It Is Sure That You Have Written Incorrect Spelling Or Your Requested Movie/Series Does Not Exit In My Database.😐</i></b>",
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
 
